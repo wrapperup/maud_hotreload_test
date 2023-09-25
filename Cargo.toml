@@ -1,0 +1,18 @@
+[package]
+name = "maud_hotreload_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = { version = "0.6.20", features = ["macros"] } 
+leon = "2.0.1"
+maud = { path = "../maud/maud", features = ["axum"] }
+notify = "6.1.1"
+notify-debouncer-mini = "0.4.1"
+proc-macro2 = "1.0.67"
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread", "sync", "rt"] }
+tower = "0.4.13"
+tower-http = { version = "0.4.4", features = ["fs"] }
+tower-livereload = "0.8.1"
